@@ -41,7 +41,13 @@ class RestaurantServiceTest {
     //<<<<<<<<<<<<<<<<<<<<SEARCHING>>>>>>>>>>>>>>>>>>>>>>>>>>
 
   
-
+    @Test
+    public void display_order_total_when_selecting_an_item() {
+        int totalCost;
+        List<String> selectedItems = Arrays.asList("Sweet corn soup", "Vegetable lasagne");
+        totalCost = restaurant.getTotalCost(selectedItems);
+        assertEquals(388, totalCost);
+    }
 
     //>>>>>>>>>>>>>>>>>>>>>>ADMIN: ADDING & REMOVING RESTAURANTS<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
     @Test
@@ -64,11 +70,5 @@ class RestaurantServiceTest {
     }
     //<<<<<<<<<<<<<<<<<<<<ADMIN: ADDING & REMOVING RESTAURANTS>>>>>>>>>>>>>>>>>>>>>>>>>>
     
-    @Test
-    public void display_order_total_when_selecting_an_item() {
-        int totalCost;
-        List<String> selectedItems = Arrays.asList("Sweet corn soup", "Vegetable lasagne");
-        totalCost = restaurant.getTotalCost(selectedItems);
-        assertEquals(388, totalCost);
-    }
+
 }
