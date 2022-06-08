@@ -40,6 +40,7 @@ class RestaurantServiceTest {
     }
     //<<<<<<<<<<<<<<<<<<<<SEARCHING>>>>>>>>>>>>>>>>>>>>>>>>>>
 
+    
     @Test
     public void display_order_total_when_selecting_an_item() {
         int totalCost;
